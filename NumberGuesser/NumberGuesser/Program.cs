@@ -13,11 +13,11 @@ namespace NumberGuesser
 
             GreetUser();
 
-            while (true)
-            {
-                //create a new random object
-                Random random = new Random();
+            //create a new random object
+            Random random = new Random();
 
+            do
+            {
                 int correctNumber = random.Next(1, 10);
 
                 //Init guess var
@@ -57,24 +57,8 @@ namespace NumberGuesser
 
                 //ask to play again
                 Console.WriteLine("Play Again? [Y or N]");
-
-                string answer = Console.ReadLine();
-
-                if (answer == "Y")
-                {
-                    continue;
-                }
-
-                else if (answer == "N")
-                {
-                    return;
-                }
-
-                else
-                {
-                    return;
-                }
-            }
+               
+            } while (Console.ReadLine() == "Y");
         }
 
         // Get and display app info
